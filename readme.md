@@ -26,7 +26,7 @@ my_name = "Naman Jain"
 print("Hello and welcome" + my_name + "!!")
 ```
 
-<h3 style="color: yellow;">Comments in Python</h3>
+<h3 style="color: blue;">Comments in Python</h3>
 
 - We can write comments in python for making code eassy to understand by the programmer
 
