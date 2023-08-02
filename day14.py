@@ -8,8 +8,11 @@ print(head.center(150))
 print("\n")
 
 cls = int(input("Enter your class: ")) # here "cls" means class
-print("\n Subject in class " + str(cls) + "th are given below.\n")
-
+if(cls == 5 , cls == 10):
+    print("\nSubject in class " + str(cls) + "th are given below.\n")
+else:
+    print("\n")
+    
 if(cls == 5):
     print("English\n")
     print("Hindi\n")
