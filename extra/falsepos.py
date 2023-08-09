@@ -1,8 +1,5 @@
 # Python program to find the roots by False Position Method
 
-from ast import Break
-
-
 print("FALSE POSITION METHOD\n")
 
 # Making equtaion
