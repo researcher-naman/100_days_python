@@ -1,11 +1,14 @@
-# Python program to find the roots by Itrative / Bisection method
+# Python program to find the roots by False Position Method
 
-print("BISECTION METHOD\n")
+from ast import Break
+
+
+print("FALSE POSITION METHOD\n")
 
 # Making equtaion
 
 def maineqx(x):
-    return x*x*x*x - x*x*x - x*x -4
+    return x*x*x - x - 1
 
 # Asking user to assing the range
 
@@ -19,17 +22,32 @@ else:
     print("\n")
 
 n = int(input("Enter the Itration you have to find : ")) # Asking user how many time itration is to be done
-
-def bisection(a,b):
-    # Step 1st
-    c = (a+b)/2
-    print("\na+b/2 = " + str(a) + "+" + str(b) + "/2 = " + str(c))
     
-    # Step 2nd
+    
+def false_pos(a,b):
+    
+    # STEP 1 for sloving the formula and find the value of c
+    
+    half_1 = b-a 
+    
+    half_2 = maineqx(b) - maineqx(a)
+    
+    half_12 = half_1 / half_2
+    
+    half_3 = maineqx(a) * half_12
+    
+    c = a - half_3
+    
+    print("We calculated value of c form c = a - {f(b) * [b-a / f(b)-f(a)]}")
+    print("And we got c as: " + str(c))    
+    
+    # STEP 2 now finding f(c)
+    
     c_value = maineqx(c)
     print("So the value of f(" + str(c) + ") is " + str(c_value))
     
-    # Step 3rd
+    # STEP 3 see and of c_value for -ve and +ve for changeing a or b
+    
     if (c_value < 0):
         print("Which is -ve")
         a = c
@@ -45,7 +63,9 @@ def bisection(a,b):
 for i in range(1, n+1):
     print("\nItration Number:" + str(i) + "\n")
     print("-------------------------------------")
-    a,b = bisection(a,b)
+    a,b = false_pos(a,b)
     print("-------------------------------------")
     
 print("\nSo the final root for this funtion is " + str(a) + " or " + str(b))
+    
+    
