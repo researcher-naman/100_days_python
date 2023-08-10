@@ -77,11 +77,14 @@ def false_pos(a,b):
         a = c
         b = b
         print("now new value of a is " + str(a))
+        print("And the value of b was " + str(b))
+        
     else:
         print("Which is +ve")
         b = c
         a = a
         print("now new value of b is " + str(b))
+        print("And the value of a was " + str(a))
     return (a,b)
 
 for i in range(1, n+1):
