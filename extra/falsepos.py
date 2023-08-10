@@ -91,7 +91,7 @@ for i in range(1, n+1):
     print("\nItration Number:" + str(i) + "\n")
     print("-------------------------------------")
     a,b = false_pos(a,b)
-    myexit = int(input("Enter 1 for exit and 0 for next Itration"))
+    myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
     if (myexit == 1):
         print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
         exit()

@@ -5,7 +5,7 @@ print("BISECTION METHOD\n")
 # Making equtaion
 
 def maineqx(x):
-    return x*x*x*x - x*x*x - x*x -4
+    return -0.5*x*x + 2.5*x + 4.5
 
 # Asking user to assing the range
 
@@ -72,7 +72,7 @@ for i in range(1, n+1):
     print("\nItration Number:" + str(i) + "\n")
     print("-------------------------------------")
     a,b = bisection(a,b)
-    myexit = int(input("Enter 1 for exit and 0 next Itration"))
+    myexit = int(input("Enter 1 for exit and 0 for next Itration: "))
     if (myexit == 1):
         print("\nSo the final root for this funtion is " + str(a) + " or " + str(b) + " at Itration no. " + str(i))
         exit()
